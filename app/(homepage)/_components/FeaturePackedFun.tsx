@@ -7,12 +7,12 @@ import Feature3 from "@/public/assets/images/feature-3.png";
 
 const FeaturePackedFun = () => {
   return (
-    <section className="bg-[#F2F5FD]">
+    <section className="bg-[#FAFAFD]">
       <div
         id="features"
-        className="max-w-screen-xl mx-auto px-4 md:px-6 py-10 md:py-20 text-black flex flex-col gap-8 md:gap-16"
+        className="max-w-screen-xl mx-auto px-4 md:px-6 py-16 md:py-20 text-black flex flex-col gap-8 md:gap-16"
       >
-        <span className="flex flex-col md:flex-row  gap-4 md:gap-8 justify-between">
+        <span className="flex flex-col md:flex-row gap-4 md:gap-8 justify-between">
           <h2 className="font-semibold text-xl md:text-3xl max-w-2xl w-full">
             Feature-Packed Fun: Discover What Payfeer Can Do!
           </h2>
