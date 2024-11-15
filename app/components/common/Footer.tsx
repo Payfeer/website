@@ -25,7 +25,7 @@ const Footer = () => {
 
   return (
     <footer className="bottom-0 z-0 bg-[#200063] text-white min-h-[344px]">
-      <div className="relative p-4 md:px-6 md:pt-6 lg:px-10 lg:pt-32">
+      <div className="relative p-4 md:px-6 pt-28 md:pt-32 lg:px-10">
         <div className="p-4 max-w-screen-md mx-auto flex flex-col gap-6 items-center">
           <Link href="/" className="text-3xl text-black font-bold uppercase">
             <Image
@@ -38,7 +38,7 @@ const Footer = () => {
             />
           </Link>
 
-          <ul className="flex md:gap-6 lg:gap-10">
+          <ul className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-10 text-center">
             {navigation.map((item, idx) => (
               <li key={idx} className="">
                 <Link

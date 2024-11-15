@@ -3,6 +3,9 @@
 import { X, Plus } from "lucide-react";
 import { useState } from "react";
 
+import Questions from "@/public/assets/images/faq-image.png";
+import Image from "next/image";
+
 type FaqItem = {
   q: string;
   a: string;
@@ -92,7 +95,8 @@ export default function FAQs() {
             secure withdrawals, we’ve got you covered!
           </p>
         </div>
-        <div className="mx-auto max-w-screen-lg space-y-4 mt-8">
+
+        <div className="mx-auto md:max-w-screen-md 2xl:max-w-screen-lg space-y-4 mt-8 relative">
           {faqsList.map((item, index) => (
             <FaqCard
               key={index}
@@ -102,6 +106,23 @@ export default function FAQs() {
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             />
           ))}
+
+          <Image
+            src={Questions}
+            alt="questions"
+            className="absolute -top-28 xl:-top-36 -right-36 xl:-right-48 hidden lg:block"
+            width={220}
+            height={220}
+            quality={90}
+          />
+          <Image
+            src={Questions}
+            alt="questions"
+            className="absolute -bottom-10 -left-36 xl:-left-48 hidden lg:block"
+            width={220}
+            height={220}
+            quality={90}
+          />
         </div>
       </div>
     </section>

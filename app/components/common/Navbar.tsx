@@ -29,7 +29,6 @@ const Navbar = () => {
             <Image
               src={Logo}
               alt="Payfeer Logo"
-              className=""
               width={43}
               height={42}
               quality={90}
@@ -57,21 +56,23 @@ const Navbar = () => {
           }`}
         >
           <ul className="justify-center items-center space-y-8 md:flex space-x-6 lg:space-x-10 md:space-y-0">
-            {navigation.map((item, idx) => {
-              return (
-                <li
-                  key={idx}
-                  className="text-[22px] md:text-sm lg:text-base capitalize active:scale-95 duration-300"
+            {navigation.map((item, idx) => (
+              <li
+                key={idx}
+                className="text-[22px] md:text-sm lg:text-base capitalize active:scale-95 duration-300"
+              >
+                <Link
+                  href={item.path}
+                  className="relative text-white hover:text-payfeer-primary md:text-black md:hover:text-payfeer-primary font-medium group"
                 >
-                  <Link
-                    href={item.path}
-                    className="text-white hover:text-payfeer-primary md:text-black md:hover:text-payfeer-primary duration-300 font-medium"
-                  >
+                  <span className="relative">
                     {item.title}
-                  </Link>
-                </li>
-              );
-            })}
+                    {/* Underline */}
+                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-current transition-all duration-300 group-hover:w-full active:w-1/2"></span>
+                  </span>
+                </Link>
+              </li>
+            ))}
 
             <div className="flex-1 items-center justify-end gap-x-6 space-y-6 md:hidden">
               <Link
@@ -83,7 +84,6 @@ const Navbar = () => {
             </div>
           </ul>
         </div>
-        {/* <div className="hidden md:inline-block px-6 lg:px-10"> */}
         <div className="hidden md:flex flex-none px-6 xl:px-10 gap-x-2 items-center justify-end mt-6 space-y-6 md:space-y-0 md:mt-0">
           <Link
             href="/"
