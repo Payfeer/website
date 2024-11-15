@@ -25,7 +25,7 @@ const Footer = () => {
 
   return (
     <footer className="bottom-0 z-0 bg-[#200063] text-white min-h-[344px]">
-      <div className="relative p-4 md:px-6 pt-28 md:pt-32 lg:px-10">
+      <div className="relative px-4 md:px-6 pt-28 md:pt-32 lg:px-10">
         <div className="p-4 max-w-screen-md mx-auto flex flex-col gap-6 items-center">
           <Link href="/" className="text-3xl text-black font-bold uppercase">
             <Image
@@ -51,42 +51,42 @@ const Footer = () => {
             ))}
           </ul>
 
-          <p className="text-center">
+          <p className="text-center text-sm md:text-base">
             Payfeer—your trusted partner in seamless currency exchange. Connect,
             convert, and manage your money effortlessly. Wherever you are,
             we&quot;re here to help you make the most of your funds.
           </p>
 
-          <div className="overflow-hidden relative">
+          <div className="overflow-hidden relative pt-12">
             <div className="px-4 relative z-10">
-              <div className="flex justify-center space-x-6">
+              <div className="flex justify-center space-x-3 md:space-x-6">
                 <Link
                   href="#"
                   className="hover:text-gray-400 duration-200 transition-colors"
                 >
                   <span className="sr-only">Facebook</span>
-                  <FaFacebookF className="size-6" />
+                  <FaFacebookF className="size-4 md:size-6" />
                 </Link>
                 <Link
                   href="#"
                   className="hover:text-gray-400 duration-200 transition-colors"
                 >
                   <span className="sr-only">Twitter</span>
-                  <FaTwitter className="size-6" />
+                  <FaTwitter className="size-4 md:size-6" />
                 </Link>
                 <Link
                   href="#"
                   className="hover:text-gray-400 duration-200 transition-colors"
                 >
                   <span className="sr-only">LinkedIn</span>
-                  <FaLinkedinIn className="size-6" />
+                  <FaLinkedinIn className="size-4 md:size-6" />
                 </Link>
                 <Link
                   href="/"
                   className="hover:text-gray-400 duration-200 transition-colors"
                 >
                   <span className="sr-only">Instagram</span>
-                  <BsInstagram className="size-6" />
+                  <BsInstagram className="size-4 md:size-6" />
                 </Link>
               </div>
             </div>
@@ -94,9 +94,9 @@ const Footer = () => {
         </div>
 
         {/* Left shape */}
-        <div className="absolute left-0 bottom-0 -translate-y-1/2 w-1/4 h-[52px] bg-[#150043] rounded-tr-full" />
+        <div className="absolute left-0 bottom-0 w-1/4 md:w-2/5 h-[52px] bg-[#150043] rounded-tr-full" />
         {/* Right shape */}
-        <div className="absolute right-0 bottom-0 -translate-y-1/2 w-1/4 h-[52px] bg-[#150043] rounded-tl-full" />
+        <div className="absolute right-0 bottom-0 w-1/4 md:w-2/5 h-[52px] bg-[#150043] rounded-tl-full" />
       </div>
     </footer>
   );
