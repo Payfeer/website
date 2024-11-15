@@ -1,11 +1,14 @@
-import { FAQs, FeaturePackedFun, Hero } from "./_components";
+import { CTA, FAQs, FeaturePackedFun, Hero } from "./_components";
 
 export default function Home() {
   return (
-    <section>
+    <section className="relative">
       <Hero />
       <FeaturePackedFun />
       <FAQs />
+      <div className="-mb-24">
+        <CTA />
+      </div>
     </section>
   );
 }
