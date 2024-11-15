@@ -1,4 +1,4 @@
-import { CTA, FAQs, FeaturePackedFun, Hero } from "./_components";
+import { Testimonials, FAQs, FeaturePackedFun, Hero } from "./_components";
 
 export default function Home() {
   return (
@@ -6,9 +6,7 @@ export default function Home() {
       <Hero />
       <FeaturePackedFun />
       <FAQs />
-      <div className="-mb-24">
-        <CTA />
-      </div>
+      <Testimonials />
     </section>
   );
 }
