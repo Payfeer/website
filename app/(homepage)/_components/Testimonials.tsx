@@ -63,11 +63,11 @@ const Testimonials = () => {
         id="testimonials"
         className="max-w-screen-xl mx-auto px-4 md:px-6 py-16 md:py-20 text-black flex flex-col gap-8 md:gap-16"
       >
-        <div className="flex flex-col items-center justify-center gap-4 text-center">
+        <div className="flex flex-col items-center justify-center gap-2 md:gap-4 text-center">
           <h2 className="font-semibold text-xl md:text-3xl">
             What Our Users Are Saying
           </h2>
-          <p className="max-w-[900px] md:text-lg/relaxed">
+          <p className="max-w-[900px] text-sm md:text-lg/relaxed">
             Discover why Payfeer is the preferred choice for seamless currency
             exchange and secure transfers. Hear directly from our users about
             their experiences managing funds with ease and confidence.

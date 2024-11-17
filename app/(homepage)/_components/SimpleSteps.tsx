@@ -82,7 +82,7 @@ const SimpleSteps = () => {
               <div className="flex gap-4 items-start group cursor-pointer">
                 <div
                   className={cn(
-                    "relative z-10 rounded-full size-12 flex items-center justify-center text-lg font-semibold shrink-0 transition-colors",
+                    "relative z-10 rounded-full size-9 md:size-12 flex items-center justify-center text-sm md:text-lg font-semibold shrink-0 transition-colors",
                     activeStep === step.number
                       ? "bg-[#4339ca] text-white"
                       : "bg-[#D8D8D8] text-gray-900 group-hover:bg-gray-200"

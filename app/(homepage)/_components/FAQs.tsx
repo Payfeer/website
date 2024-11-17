@@ -89,7 +89,7 @@ export default function FAQs() {
   return (
     <section className="w-full py-16 md:py-20 bg-[#FAFAFD]">
       <div id="faqs" className="max-w-screen-xl mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center gap-4 text-center">
+        <div className="flex flex-col items-center justify-center gap-2 md:gap-4 text-center">
           <h2 className="font-semibold text-xl md:text-3xl">
             Frequently Asked Questions
           </h2>

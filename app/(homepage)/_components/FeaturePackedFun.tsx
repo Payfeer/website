@@ -12,7 +12,7 @@ const FeaturePackedFun = () => {
         id="features"
         className="max-w-screen-xl mx-auto px-4 md:px-6 py-16 md:py-20 text-black flex flex-col gap-8 md:gap-16"
       >
-        <span className="flex flex-col md:flex-row gap-4 md:gap-8 justify-between">
+        <span className="flex flex-col md:flex-row gap-2 md:gap-8 justify-between">
           <h2 className="font-semibold text-xl md:text-3xl max-w-2xl w-full">
             Feature-Packed Fun: Discover What Payfeer Can Do!
           </h2>
@@ -25,7 +25,7 @@ const FeaturePackedFun = () => {
         </span>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-9">
-          <div className="bg-[#3B46F1] text-white rounded-lg px-6 pt-6 flex flex-col justify-between gap-8 overflow-hidden group cursor-pointer">
+          <div className="bg-[#3B46F1] text-white rounded-lg px-3 md:px-6 pt-6 flex flex-col justify-between gap-8 overflow-hidden group cursor-pointer">
             <span className="space-y-2">
               <h3 className="font-medium text-xl md:text-2xl">
                 Multi-Currency Wallet
@@ -47,7 +47,7 @@ const FeaturePackedFun = () => {
               />
             </span>
           </div>
-          <div className="bg-[#8B3BF1] max-h-[401px] text-white rounded-lg px-6 pt-6 flex flex-col justify-between gap-8 overflow-hidden group cursor-pointer">
+          <div className="bg-[#8B3BF1] max-h-[401px] text-white rounded-lg px-3 md:px-6 pt-6 flex flex-col justify-between gap-8 overflow-hidden group cursor-pointer">
             <span className="space-y-2">
               <h3 className="font-medium text-xl md:text-2xl">
                 Multi-Currency Wallet
@@ -69,7 +69,7 @@ const FeaturePackedFun = () => {
               />
             </span>
           </div>
-          <div className="bg-[#0A8D48] text-white rounded-lg px-6 pt-6 flex flex-col justify-between gap-8 overflow-hidden group cursor-pointer">
+          <div className="bg-[#0A8D48] text-white rounded-lg px-3 md:px-6 pt-6 flex flex-col justify-between gap-8 overflow-hidden group cursor-pointer">
             <span className="space-y-2">
               <h3 className="font-medium text-xl md:text-2xl">
                 Multi-Currency Wallet

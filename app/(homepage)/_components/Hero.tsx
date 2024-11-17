@@ -23,7 +23,7 @@ const Hero = () => {
 
   return (
     <section className="">
-      <div className="max-w-screen-xl mx-auto h-screen lg:max-h-[896px] pt-14 lg:pt-16 px-4 md:px-6 z-40 text-black flex flex-col gap-12 lg:gap-16">
+      <div className="max-w-screen-xl mx-auto h-screen lg:max-h-[896px] pt-8 md:pt-14 lg:pt-16 px-4 md:px-6 z-40 text-black flex flex-col gap-12 lg:gap-16">
         {/* heading and CTA */}
         <div
           className="flex flex-col gap-8 items-center text-center max-w-screen-lg mx-auto"
