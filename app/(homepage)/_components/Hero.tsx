@@ -11,6 +11,7 @@ import Mockup2 from "@/public/assets/images/mockup-2.png";
 import Mockup3 from "@/public/assets/images/mockup-3.png";
 import GooglePlay from "@/public/assets/svg/google-play-icon.svg";
 import Apple from "@/public/assets/svg/apple-icon.svg";
+import Vector from "@/public/assets/svg/vector.svg";
 
 const Hero = () => {
   useEffect(() => {
@@ -23,7 +24,7 @@ const Hero = () => {
 
   return (
     <section className="">
-      <div className="max-w-screen-xl mx-auto h-screen lg:max-h-[896px] pt-8 md:pt-14 lg:pt-16 px-4 md:px-6 z-40 text-black flex flex-col gap-12 lg:gap-16">
+      <div className="max-w-screen-xl mx-auto h-scree l:max-h-[896px] pt-8 md:pt-14 lg:pt-16 px-4 md:px-6 z-40 text-black flex flex-col gap-12 lg:gap-16">
         {/* heading and CTA */}
         <div
           className="flex flex-col gap-8 items-center text-center max-w-screen-lg mx-auto"
@@ -51,34 +52,42 @@ const Hero = () => {
           </Link>
         </div>
 
-        <div className="flex gap-4 justify-center overflow-hidden">
+        <div className="relative">
           <Image
-            src={Mockup1}
-            alt="mockup"
-            className="flex-1 w-[118px] h-[242px] md:w-[334px] md:h-[690px]"
-            width={334}
-            height={690}
-            quality={90}
-            priority
+            src={Vector}
+            alt="Vector"
+            className="absolute -top-24 left-10 hidden md:block"
+            width={141}
+            height={96}
           />
-          <Image
-            src={Mockup2}
-            alt="mockup"
-            className="flex-1 w-[118px] h-[242px] md:w-[334px] md:h-[690px] mt-12"
-            width={334}
-            height={690}
-            quality={90}
-            priority
-          />
-          <Image
-            src={Mockup3}
-            alt="mockup"
-            className="flex-1 w-[118px] h-[242px] md:w-[334px] md:h-[690px]"
-            width={334}
-            height={690}
-            quality={90}
-            priority
-          />
+
+          <div className="flex gap-4 justify-center max-h-[400px] overflow-scroll md:overflow-hidden">
+            <Image
+              src={Mockup1}
+              alt="mockup"
+              width={334}
+              height={690}
+              quality={90}
+              priority
+            />
+            <Image
+              src={Mockup2}
+              alt="mockup"
+              className="mt-12"
+              width={334}
+              height={690}
+              quality={90}
+              priority
+            />
+            <Image
+              src={Mockup3}
+              alt="mockup"
+              width={334}
+              height={690}
+              quality={90}
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
