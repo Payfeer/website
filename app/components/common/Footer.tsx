@@ -23,7 +23,8 @@ const Footer = () => {
     AOS.init({
       duration: 1000,
       once: true,
-      easing: "ease-out-cubic",
+      // easing: "ease-out-cubic",
+      easing: "ease-in-out",
     });
   }, []);
 
@@ -105,14 +106,14 @@ const Footer = () => {
         {/* Left shape */}
         <div
           className="absolute left-0 bottom-0 w-1/4 md:w-2/5 h-[52px] bg-[#150043] rounded-tr-full"
-          data-aos="slide-right"
-          data-aos-delay="600"
+          // data-aos="slide-right"
+          // data-aos-delay="600"
         />
         {/* Right shape */}
         <div
           className="absolute right-0 bottom-0 w-1/4 md:w-2/5 h-[52px] bg-[#150043] rounded-tl-full"
-          data-aos="slide-left"
-          data-aos-delay="600"
+          // data-aos="slide-left"
+          // data-aos-delay="600"
         />
       </div>
     </footer>
