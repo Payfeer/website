@@ -19,23 +19,33 @@ const Hero = () => {
       duration: 800,
       easing: "ease-in-out",
       once: false,
+      // offset: 120,
     });
   }, []);
 
   return (
-    <section className="">
-      <div className="max-w-screen-xl mx-auto h-scree l:max-h-[896px] pt-8 md:pt-14 lg:pt-16 px-4 md:px-6 z-40 text-black flex flex-col gap-12 lg:gap-16">
-        {/* heading and CTA */}
+    <section className="relative">
+      <div className="max-w-screen-xl mx-auto pt-8 md:pt-14 lg:pt-16 px-4 md:px-6 z-40 text-black flex flex-col gap-12 lg:gap-16">
+        {/* Heading and CTA */}
         <div
           className="flex flex-col gap-8 items-center text-center max-w-screen-lg mx-auto"
           data-aos="fade-up"
           data-aos-delay="200"
+          data-aos-anchor-placement="top-center"
         >
           <div className="flex flex-col gap-4 text-center">
-            <h1 className="max-w-[981px] mx-auto font-semibold text-xl sm:text-2xl md:text-4xl lg:text-5xl ">
+            <h1
+              className="max-w-[981px] mx-auto font-semibold text-xl sm:text-2xl md:text-4xl lg:text-5xl"
+              data-aos="fade-down"
+              data-aos-delay="400"
+            >
               Convert, manage, and withdraw funds with ease—wherever you are.
             </h1>
-            <p className="max-w-screen-md mx-auto text-sm sm:text-base lg:text-lg text-payfeer-neutral">
+            <p
+              className="max-w-screen-md mx-auto text-sm sm:text-base lg:text-lg text-payfeer-neutral"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
               With Payfeer, currency exchange becomes seamless. Manage
               multi-currency wallets, make instant conversions, and withdraw in
               cash or to your domiciliary account—all from one powerful app.
@@ -45,6 +55,8 @@ const Hero = () => {
           <Link
             href="/"
             className="p-4 px-3 md:px-4 flex items-center gap-2 capitalize font-medium rounded-lg text-sm md:text-base active:scale-95 duration-300 text-white bg-payfeer-primary hover:bg-payfeer-primary/90"
+            data-aos="zoom-in"
+            data-aos-delay="800"
           >
             Download App
             <Image src={GooglePlay} alt="Google Play" width={20} height={22} />
@@ -52,6 +64,7 @@ const Hero = () => {
           </Link>
         </div>
 
+        {/* Mockups */}
         <div className="relative">
           <Image
             src={Vector}
@@ -59,9 +72,15 @@ const Hero = () => {
             className="absolute -top-24 left-10 hidden md:block"
             width={141}
             height={96}
+            data-aos="fade-right"
+            data-aos-delay="300"
           />
 
-          <div className="flex gap-4 justify-center max-h-[400px] overflow-scroll md:overflow-hidden">
+          <div
+            className="flex gap-4 justify-center max-h-[400px] overflow-scroll md:overflow-hidden"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <Image
               src={Mockup1}
               alt="mockup"
@@ -69,6 +88,7 @@ const Hero = () => {
               height={690}
               quality={90}
               priority
+              data-aos="zoom-in"
             />
             <Image
               src={Mockup2}
@@ -78,6 +98,8 @@ const Hero = () => {
               height={690}
               quality={90}
               priority
+              data-aos="zoom-in"
+              data-aos-delay="200"
             />
             <Image
               src={Mockup3}
@@ -86,6 +108,8 @@ const Hero = () => {
               height={690}
               quality={90}
               priority
+              data-aos="zoom-in"
+              data-aos-delay="400"
             />
           </div>
         </div>

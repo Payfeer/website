@@ -1,7 +1,9 @@
 "use client";
 
 import { X, Plus } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import Questions from "@/public/assets/images/faq-image.png";
 import Image from "next/image";
@@ -23,7 +25,10 @@ function FaqCard({
   onClick: () => void;
 }) {
   return (
-    <div className="overflow-hidden border-0 shadow-sm bg-[#212897] text-white rounded-lg">
+    <div
+      className="overflow-hidden border-0 shadow-sm bg-[#212897] text-white rounded-lg"
+      data-aos="fade-up"
+    >
       <button
         className={`w-full text-left p-3 md:p-6 ${
           isOpen
@@ -63,6 +68,14 @@ function FaqCard({
 export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: false,
+    });
+  }, []);
+
   const faqsList: FaqItem[] = [
     {
       q: "How do I create an account on Payfeer?",
@@ -89,7 +102,10 @@ export default function FAQs() {
   return (
     <section className="w-full py-16 md:py-20 bg-[#FAFAFD]">
       <div id="faqs" className="max-w-screen-xl mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center gap-2 md:gap-4 text-center">
+        <div
+          className="flex flex-col items-center justify-center gap-2 md:gap-4 text-center"
+          data-aos="fade-up"
+        >
           <h2 className="font-semibold text-xl md:text-3xl">
             Frequently Asked Questions
           </h2>
@@ -100,7 +116,10 @@ export default function FAQs() {
           </p>
         </div>
 
-        <div className="mx-auto md:max-w-screen-md 2xl:max-w-screen-lg space-y-4 mt-8 relative">
+        <div
+          className="mx-auto md:max-w-screen-md 2xl:max-w-screen-lg space-y-4 mt-8 relative"
+          data-aos="fade-up"
+        >
           {faqsList.map((item, index) => (
             <FaqCard
               key={index}
