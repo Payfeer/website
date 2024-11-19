@@ -7,7 +7,7 @@ import AppStore from "@/public/assets/svg/app-store-cta.svg";
 const CTA = () => {
   return (
     <section className="px-4 md:px-6">
-      <div className="max-w-screen-xl mx-auto rounded-[46px] px-6 py-8 md:p-10 lg:p-20 flex flex-col gap-10 justify-center items-center text-center text-white bg-[#200063] drop-shadow-xl">
+      <div className="max-w-screen-xl mx-auto rounded-t-[46px] px-6 py-8 md:p-10 lg:p-20 flex flex-col gap-10 justify-center items-center text-center text-white bg-[#200063] drop-shadow-xl">
         <h2 className="text-lg md:text-xl lg:text-3xl">
           Ready to take control of your currency exchanges? Join Payfeer today
           and experience fast, reliable, and seamless transactions. Start
