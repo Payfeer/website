@@ -35,7 +35,7 @@ const Hero = () => {
         >
           <div className="flex flex-col gap-4 text-center">
             <h1
-              className="max-w-[981px] mx-auto font-semibold text-xl sm:text-2xl md:text-4xl lg:text-5xl"
+              className="max-w-[981px] mx-auto font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
               data-aos="fade-down"
               data-aos-delay="400"
             >
