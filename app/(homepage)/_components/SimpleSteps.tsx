@@ -52,6 +52,14 @@ const SimpleSteps = () => {
     });
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveStep((prev) => (prev === steps.length ? 1 : prev + 1));
+    }, 5000); // Switch step every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [steps.length]);
+
   return (
     <div
       id="get-started"
@@ -75,6 +83,7 @@ const SimpleSteps = () => {
               width={523}
               height={483}
               className="transition-transform duration-500 transform scale-100"
+              priority
               quality={90}
             />
           </div>
@@ -92,7 +101,7 @@ const SimpleSteps = () => {
               <div
                 key={index}
                 className={cn(
-                  "h-1/4 w-full transition-colors duration-300",
+                  "h-1/4 w-full transition-colors duration-500",
                   index + 1 === activeStep ? "bg-[#3B46F1]" : "bg-transparent"
                 )}
               />
@@ -100,9 +109,8 @@ const SimpleSteps = () => {
           </div>
 
           {steps.map((step) => (
-            <button
+            <div
               key={step.number}
-              onClick={() => setActiveStep(step.number)}
               className="w-full text-left"
               data-aos="fade-up"
               data-aos-delay={300 + step.number * 100}
@@ -110,7 +118,7 @@ const SimpleSteps = () => {
               <div className="flex gap-4 items-start group cursor-pointer">
                 <div
                   className={cn(
-                    "relative z-10 rounded-full size-9 md:size-12 flex items-center justify-center text-sm md:text-lg font-semibold shrink-0 transition-colors duration-300",
+                    "relative z-10 rounded-full size-9 md:size-12 flex items-center justify-center text-sm md:text-lg font-semibold shrink-0 transition-colors duration-500",
                     activeStep === step.number
                       ? "bg-[#4339ca] text-white"
                       : "bg-[#D8D8D8] text-gray-900 group-hover:bg-gray-200"
@@ -124,7 +132,7 @@ const SimpleSteps = () => {
                   </h3>
                   <p
                     className={cn(
-                      "text-sm md:text-lg transition-colors duration-300",
+                      "text-sm md:text-lg transition-colors duration-500",
                       activeStep === step.number
                         ? "text-gray-900"
                         : "text-gray-500"
@@ -134,7 +142,7 @@ const SimpleSteps = () => {
                   </p>
                 </div>
               </div>
-            </button>
+            </div>
           ))}
         </div>
       </div>
