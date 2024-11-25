@@ -74,8 +74,6 @@ const SimpleSteps = () => {
               alt={`Step ${activeStep} illustration`}
               width={523}
               height={483}
-              // width={activeStep === 2 || activeStep === 3 ? 345 : 523}
-              // height={activeStep === 2 || activeStep === 3 ? 714 : 483}
               className="transition-transform duration-500 transform scale-100"
               quality={90}
             />
@@ -88,14 +86,17 @@ const SimpleSteps = () => {
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          {/* Vertical Progress Line */}
+          {/* Vertical Progress Bar */}
           <div className="absolute left-6 top-6 bottom-6 w-0.5 bg-[#3B3BF15C]">
-            <div
-              className="absolute top-0 w-0.5 bg-[#3B46F1] transition-all duration-300 ease-out"
-              style={{
-                height: `${((activeStep - 1) / (steps.length - 1)) * 100}%`,
-              }}
-            />
+            {steps.map((_, index) => (
+              <div
+                key={index}
+                className={cn(
+                  "h-1/4 w-full transition-colors duration-300",
+                  index + 1 === activeStep ? "bg-[#3B46F1]" : "bg-transparent"
+                )}
+              />
+            ))}
           </div>
 
           {steps.map((step) => (
