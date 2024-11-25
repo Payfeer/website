@@ -6,6 +6,9 @@ import "aos/dist/aos.css";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Step1 from "@/public/assets/images/step-1.png";
+import Step2 from "@/public/assets/images/step-2.png";
+import Step3 from "@/public/assets/images/step-3.png";
+import Step4 from "@/public/assets/images/step-4.png";
 
 const SimpleSteps = () => {
   const [activeStep, setActiveStep] = useState(1);
@@ -23,21 +26,21 @@ const SimpleSteps = () => {
       title: "Fund Your Wallet",
       description:
         "Add funds to your multi-currency wallet using various payment methods. It's quick, easy, and allows you to manage multiple currencies at once.",
-      image: Step1,
+      image: Step2,
     },
     {
       number: 3,
       title: "Start Converting",
       description:
         "Choose your currencies, enter the amount, and let Payfeer handle the rest! Enjoy instant conversions at competitive rates, making your financial transactions smoother than ever.",
-      image: Step1,
+      image: Step3,
     },
     {
       number: 4,
       title: "Withdraw Your Funds",
       description:
         "Select your preferred withdrawal method—be it cash pickup or interwallet transfer—and receive your funds effortlessly. Your money is always within reach.",
-      image: Step1,
+      image: Step4,
     },
   ];
 
@@ -61,7 +64,6 @@ const SimpleSteps = () => {
 
       {/* Steps */}
       <div className="grid gap-4 md:gap-8 lg:grid-cols-2">
-        {/* Step Image */}
         <div className="bg-[#4339ca] rounded-3xl p-8 flex items-center justify-center">
           <div
             key={activeStep}
@@ -72,6 +74,8 @@ const SimpleSteps = () => {
               alt={`Step ${activeStep} illustration`}
               width={523}
               height={483}
+              // width={activeStep === 2 || activeStep === 3 ? 345 : 523}
+              // height={activeStep === 2 || activeStep === 3 ? 714 : 483}
               className="transition-transform duration-500 transform scale-100"
               quality={90}
             />
